@@ -1,7 +1,6 @@
-package basic_3_immutability;
+package _1_basic._3_immutability;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -31,14 +30,9 @@ public class Stone2 {
     }
 
     public List<String> getMinerals() {
-        return cloneList(minerals);
+        return new ArrayList<>(minerals);
     }
     
-    private <T> List<T> cloneList(List<T> list) {
-        List<T> clone = new ArrayList<>();
-        Collections.copy(clone, list);
-        return clone;
-    }
 
     public Stone2(Double volume, Double weight, String color, String rockType, List<String> minerals) {
         this.volume = volume;
@@ -81,19 +75,19 @@ public class Stone2 {
     }
     
     public Stone2 withRockType(String newRockType) {
-        return new Stone2(volume, weight, color, newRockType, cloneList(minerals));
+        return new Stone2(volume, weight, color, newRockType, new ArrayList<>(minerals));
     }
     
     public Stone2 withColor(String newColor) {
-        return new Stone2(volume, weight, newColor, rockType, cloneList(minerals));
+        return new Stone2(volume, weight, newColor, rockType, new ArrayList<>(minerals));
     }
     
     public Stone2 withVolume(Double newVolume) {
-        return new Stone2(newVolume, weight, color, rockType, cloneList(minerals));
+        return new Stone2(newVolume, weight, color, rockType, new ArrayList<>(minerals));
     }
     
     public Stone2 withVWeight(Double newWeight) {
-        return new Stone2(volume, newWeight, color, rockType, cloneList(minerals));
+        return new Stone2(volume, newWeight, color, rockType, new ArrayList<>(minerals));
     }
     
     public Stone2 withMinerals(List<String> newMineralsList) {
@@ -101,7 +95,7 @@ public class Stone2 {
     }
     
     public Stone2 addingMineral(String mineral) {
-        List<String> newMineralsList = cloneList(minerals);
+        List<String> newMineralsList = new ArrayList<>(minerals);
         newMineralsList.add(mineral);
         return new Stone2(volume, weight, color, rockType, newMineralsList);
     }

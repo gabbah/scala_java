@@ -1,4 +1,7 @@
 class Pojo(var age: Int, val name: String) { // val makes it immutable, public is default for everything in the class 
+  
+  println("here be constructor.")
+  
   def canEqual(a: Any) = a.isInstanceOf[Pojo]
 
   override def equals(that: Any): Boolean =

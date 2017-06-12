@@ -1,4 +1,4 @@
-package basic_1_classes;
+package _1_basic._1_classes;
 
 
 public class Pojo {

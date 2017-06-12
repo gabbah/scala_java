@@ -1,7 +1,6 @@
-package basic_6_pattern_matching;
+package _1_basic._6_pattern_matching;
 
 
-import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;

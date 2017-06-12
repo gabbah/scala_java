@@ -1,4 +1,4 @@
-package basic_3_immutability;
+package _1_basic._3_immutability;
 
 import java.util.ArrayList;
 import java.util.Collections;

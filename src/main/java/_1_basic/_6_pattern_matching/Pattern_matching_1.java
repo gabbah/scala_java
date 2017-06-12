@@ -1,4 +1,4 @@
-package basic_6_pattern_matching;
+package _1_basic._6_pattern_matching;
 
 import java.time.LocalDate;
 

@@ -1,10 +1,7 @@
-package basic_5_higher_order_functions;
-
-import basic_4_functions.Functions;
+package _1_basic._5_higher_order_functions;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class HigherOrderFunctions {
