@@ -1,7 +1,6 @@
 package _1_basic._7_option;
 
 import java.util.Optional;
-import java.util.function.Consumer;
 
 public class Options {
     
@@ -45,14 +44,14 @@ public class Options {
         }
         
         public static void main(String[] args) {
-            Person person = new Person(new Wallet(null));
+            Person person = new Person(new Wallet(new License()));
             System.out.println(mayDriveCar(person));
             System.out.println(mayDriveCar2(person));
         }
     
     
     }
-    // Alternative two: Java 8 Optional as method return values
+    // Alternative three: Java 8 Optional as method return values
     static class CaseTwo {
         static class Person {
             // Optional<Wallet> wallet; // Not a good idea - Optional is not serializable
@@ -88,7 +87,7 @@ public class Options {
         }
 
         public static void main(String[] args) {
-            Person person = new Person(null);
+            Person person = new Person(new Wallet(new License()));
             System.out.println(mayDriveCar(person));
         }
 

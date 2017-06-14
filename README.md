@@ -8,9 +8,9 @@
 * Functions
 * Higher order functions
 * Pattern matching
-* Covariance
 * Option
 * Collections
+* Covariance
 * Java interoperability
 
 ##### Advanced
