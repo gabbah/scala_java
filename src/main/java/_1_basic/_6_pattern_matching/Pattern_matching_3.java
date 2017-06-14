@@ -71,6 +71,7 @@ public class Pattern_matching_3 {
         if (leftCorrection != 0) { return getLeftMonocle(leftCorrection); }
         if (rightCorrection != 0) { return getRightMonocle(rightCorrection); }
         // bad example, change it!
+        return null;
     }
 
 }
