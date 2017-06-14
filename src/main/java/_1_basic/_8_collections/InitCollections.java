@@ -1,9 +1,6 @@
 package _1_basic._8_collections;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
@@ -21,7 +18,13 @@ public class InitCollections {
         // ... oops.. so we have to:
         List<Integer> numbers2 = new ArrayList<>(asList(1,2,3,4,5));
         numbers2.add(1); // works
+        
+        // or use some guava or other external lib
 
 
+        Map<String, Integer> map = new HashMap<>();
+        map.put("a", 1);
+        map.put("b", 2);
+        
     }
 }
