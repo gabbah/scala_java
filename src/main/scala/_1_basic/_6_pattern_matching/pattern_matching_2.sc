@@ -1,7 +1,7 @@
 // given two lists of numbers: 
 // - if both lists are non-empty, print the sum of both lists elements.
 // - if either list is empty, print the second element of the other list (if it exists).
-// if boths lists are empty, print "both empty"
+// if both lists are empty, print "both empty"
 
 // alternative 1
 def printInfo(a: Seq[Int], b: Seq[Int]) = (a, b) match {
@@ -16,7 +16,7 @@ def printInfo2(a: Seq[Int], b: Seq[Int]) = (a, b) match {
     case (Nil, Nil)                => println("both empty")
     case (Nil, b) if b.size > 1    => println(b(1))
     case (a, Nil) if a.size > 1    => println(a(1))
-    case _                         => println((a++b).sum)
+    case _                         => println((a ++ b).sum)
 }
 
 
