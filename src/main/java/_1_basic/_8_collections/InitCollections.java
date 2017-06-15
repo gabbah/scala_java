@@ -2,6 +2,7 @@ package _1_basic._8_collections;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
 
@@ -19,12 +20,15 @@ public class InitCollections {
         List<Integer> numbers2 = new ArrayList<>(asList(1,2,3,4,5));
         numbers2.add(1); // works
         
-        // or use some guava or other external lib
+        // java 8
+        List<Integer> collect = Stream.of(1, 2, 3).collect(Collectors.toList());  // creates modifiable list
+
 
 
         Map<String, Integer> map = new HashMap<>();
         map.put("a", 1);
         map.put("b", 2);
+        // or use guava or some other external lib
         
     }
 }
