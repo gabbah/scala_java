@@ -60,18 +60,20 @@ public class Pattern_matching_3 {
         }
     }
     
-    static class Monocle {}
     
-    public static Monocle getLeftMonocle(Double correction){ throw new NotImplementedException();}
-    public static Monocle getRightMonocle(Double correction){ throw new NotImplementedException();}
+    public static void doLeft(Color leftColor, Double correction){ throw new NotImplementedException();}
+    public static void doRight(Color rightColor, Double correction){ throw new NotImplementedException();}
+    public static void doOther(){ throw new NotImplementedException();}
 
-    public static Monocle monocleForPerson(NearSightedPerson p) {
+    public static void treatPerson(NearSightedPerson p) {
         Double leftCorrection = p.getEyes().getLeft().getCorrection();
+        Color leftColor = p.getEyes().getLeft().getColor();
         Double rightCorrection = p.getEyes().getRight().getCorrection();
-        if (leftCorrection != 0) { return getLeftMonocle(leftCorrection); }
-        if (rightCorrection != 0) { return getRightMonocle(rightCorrection); }
-        // bad example, change it!
-        return null;
+        Color rightColor = p.getEyes().getRight().getColor();
+        if (leftCorrection != 0) { doLeft(leftColor, leftCorrection); }
+        else if (rightCorrection != 0) { doRight(rightColor, rightCorrection); }
+        else doOther();
+        
     }
 
 }
