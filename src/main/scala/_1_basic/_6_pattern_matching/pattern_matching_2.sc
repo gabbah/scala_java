@@ -6,8 +6,8 @@
 // alternative 1
 def printInfo(a: Seq[Int], b: Seq[Int]) = (a, b) match {
     case (Nil, Nil)                => println("both empty")
-    case (Nil, e1 :: e2 :: Nil)    => println(e2)
-    case (e1 :: e2 :: Nil, Nil)    => println(e2)
+    case (Nil, e1 :: e2 :: tail)    => println(e2)
+    case (e1 :: e2 :: tail, Nil)    => println(e2)
     case _                         => println((a ++ b).sum)
 }
 
