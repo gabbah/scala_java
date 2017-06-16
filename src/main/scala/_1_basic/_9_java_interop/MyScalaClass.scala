@@ -7,5 +7,5 @@ case class MyScalaClass(names: Seq[String])
 
 
 object MyScalaClass {
-  def apply(names: util.List[String]) = MyScalaClass(names.asScala)
+  def apply(names: util.List[String]): MyScalaClass = MyScalaClass(names.asScala)
 }
