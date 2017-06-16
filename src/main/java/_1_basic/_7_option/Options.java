@@ -32,7 +32,9 @@ public class Options {
         static class License { public boolean validNow() { return true;}}
 
         public static boolean mayDriveCar(Person person) {
-            return person.getWallet() != null && person.getWallet().getLicense() != null;
+            return person.getWallet() != null && 
+                    person.getWallet().getLicense() != null && 
+                    person.getWallet().getLicense().validNow();
         }
 
         // Alternative two: java 8 ofNullable
