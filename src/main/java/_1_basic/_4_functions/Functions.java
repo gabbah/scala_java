@@ -8,8 +8,7 @@ import java.util.function.Function;
 public class Functions {
     
     public static Integer ageSum(List<Person> persons, Function<Person, Integer> someFunction) {
-        // implementation here...
-        return 0;
+        return persons.stream().map(someFunction).mapToInt(i -> i).sum();
     }
     
     public static Function<Person, Integer> above18 = (Person p) -> p.getAge() >= 18 ? p.getAge() : 0;
@@ -17,12 +16,14 @@ public class Functions {
     
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
+        persons.add(new Person(30));
 
         Integer sum = ageSum(persons, above18);
+        System.out.println(sum);
     }
     
     
-    class Person {
+    static class Person {
 
         Integer age;
 
