@@ -14,10 +14,11 @@
 * Java interoperability
 
 ##### Advanced
-* currying
 * traits
 * implicits
+* currying
 * inheritance
+* variance
 * operators
 
 ##### Covered implicitly
