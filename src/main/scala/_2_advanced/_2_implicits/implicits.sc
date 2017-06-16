@@ -4,7 +4,10 @@
 // "  gabriel   klappenbach " to "Gabriel Klappenbach"
 
 implicit class NameCleaner(string: String) {
-  def clean = string.trim.split("\\s+").map(_.capitalize).mkString(" ")
+  def clean = {
+    val splitOnWhiteSpace = string.trim.split("\\s+")
+    splitOnWhiteSpace.map(_.capitalize).mkString(" ")
+  }
 }
 
 val name = "  gabriel   klappenbach ".clean

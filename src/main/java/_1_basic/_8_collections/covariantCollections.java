@@ -11,7 +11,7 @@ public class covariantCollections {
     
     public static void main(String[] args) {
         List<Cow> cows = asList(new Cow(), new Cow());
-        processAnimals(cows);  // doesn't compile: List<Cow> is not a subtype of List<Animal> !
+        //processAnimals(cows);  // doesn't compile: List<Cow> is not a subtype of List<Animal> !
     }
     
     public static List<Animal> processAnimals(List<Animal> animals) {
