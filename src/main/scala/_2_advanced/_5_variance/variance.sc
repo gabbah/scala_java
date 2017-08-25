@@ -1,42 +1,44 @@
-/**
-  * Animals -with hierarchy
-  */
+object Test {
 
 
-class Animal {}
-class Mammal extends Animal{}
-class Dog extends Mammal{}
-
-/**
-  * Boxes - classes that hold animals
-  */
 
 
-/*
+  /**
+   * Animals -with hierarchy
+   */
+
+  class Animal {}
+  class Mammal extends Animal {}
+  class Dog extends Mammal {}
+
+  /**
+   * Boxes - classes that hold animals
+   */
+
+  /*
 Box1 is covariant in T
-Box[Dog] can be used for Box[Mammal] not Box[Animal] 
+Box[Dog] can be used for Box[Mammal] not Box[Animal]
 Only subtypes of Mammal are ok
 */
-class Box1[+T]{}
+  class Box1[+T] {}
 
-/*
+  /*
 Box2 is contravariant in T
 Box[Animal] can be used for Box[Mammal] not Box[Dog]
 Only supertypes of Mammal are ok
 */
-class Box2[-T]{}
+  class Box2[-T] {}
 
-/* 
+  /*
 Box3 is invariant in T
-Only Mammal is ok 
+Only Mammal is ok
 */
-class Box3[T]{}
-Test
+  class Box3[T] {}
+  Test
 
-object Test extends App{
-  def method1(box:Box1[Mammal]){}
-  def method2(box:Box2[Mammal]){}
-  def method3(box:Box3[Mammal]){}
+  def method1(box: Box1[Mammal]) {}
+  def method2(box: Box2[Mammal]) {}
+  def method3(box: Box3[Mammal]) {}
 
   /*covariance*/
   method1(new Box1[Animal]) //compile fails
@@ -51,5 +53,8 @@ object Test extends App{
   /*invariance*/
   method3(new Box3[Animal]) //compile fails
   method3(new Box3[Mammal])
-  method3(new Box3[Dog]) //compile fails        
+  method3(new Box3[Dog]) //compile fails
+  
+  
+        
 }
